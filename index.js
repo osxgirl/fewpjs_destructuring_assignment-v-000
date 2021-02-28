@@ -1,30 +1,5 @@
 const farmAnimals = 'cow horse sheep pig chicken'
-
-
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-
-const muppet = {
-  muppetName: 'Kermit',
-  color: 'green',
-  song: 'The Rainbow Connection',
-  job: 'Host of The Muppet Show',
-  partner: 'Miss Piggy'
-};
-
-const k_muppet = {
-  k_muppetName: 'Miss Piggy',
-  k_color: 'pink',
-  k_album: {
-    the_muppet_movie: {
-      song1: 'Rainbow Connection',
-      song2: 'Moving Right Along',
-      song3: 'Never Before, Never Again',
-      song4: 'I Hope That Something Better Comes Along',
-    },
-  },
-  k_job: 'CO-Host of The Muppet Show',
-  k_partner: 'Kermit'
-};
 
 // Strings
 
@@ -49,14 +24,30 @@ const [r, o, y, g, b, , v] = colors
 // 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg.
 const [ , , , , , indg, ] = colors
 
+
 // Objects
 
+const muppet = {
+  muppetName: 'Miss Piggy',
+  color: 'pink',
+  song: 'Never Before, Never Again',
+  job: 'Cast member of The Muppet Show',
+  partner: 'Kermit',
+};
+
+const k_muppet = {
+  k_muppetName: 'Kermit',
+  k_color: 'green',
+  song1: 'Rainbow Connection',
+  song2: 'Moving Right Along',
+  song3: 'Never Before, Never Again',
+  song4: 'I Hope That Something Better Comes Along',
+  nestedJob: 'Host of The Muppet Show',
+  nestedPartner: 'Miss Piggy',
+};
+
 // 7. Use destructuring to assign all appropriate variables using the keys as the variable names
-
-const { muppetName, color, song, job, partner} = muppet
-
+const { muppetName, color, song, job, partner, } = muppet
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
-
-const { song2, song4 } = k_muppet.k_album.the_muppet_movie
-const { k_color, k_job, k_partner } = k_muppet
+const {  song2, song4, nestedJob, nestedPartner, } = k_muppet
